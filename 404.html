@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        404 Not Found
+    </title>
+
+    <style>
+        body {
+            font-family: 'STFangsong', serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #858ed1;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        main {
+            padding: 2em;
+            text-align: left;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        footer {
+            background-color: #a0abf8;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .center {
+            margin: auto;
+        }
+
+        .home-button {/* 添加按钮样式 */
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #4c5caf; /* 设置按钮背景色 */
+            color: #fff; /* 设置按钮文字颜色 */
+            border: none;
+            border-radius: 5px; /* 设置按钮圆角 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1 class="center" style="font-size: 35px;">404 Not Found</h1>
+</header>
+
+<main>
+    <p style="font-size: 27px;color: #FF0000">
+    If you arrived here because you are not using Firefox, Chrome, Microsoft Edge or Safari, please close this tab as it may lead to an infinite loop.
+    </p>
+
+    <p style="font-size: 27px;">
+        I'm sorry, but it's not your fault.
+    </p>
+
+    <p style="font-size: 27px;">
+        The website will bring you to Home Page very fast
+    </p>
+    <p style="font-size: 27px;">
+        If nothing has happened, please press the button at the bottom left.
+    </p>
+
+    <script>// 10秒后自动跳转到主页
+     setTimeout(function () {
+         window.location.href = "index.html";
+     }, 10000);
+    </script>
+</main>
+<a href="index.html" class="home-button"><!-- 返回首页按钮 -->
+    Return to Homepage
+</a>
+
+<footer><!--这玩意是签名，别动！-->
+    <p>&copy; 2024 乐正清波 保留所有权利</p>
+</footer>
+</body>
+</html>
