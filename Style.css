@@ -1,0 +1,141 @@
+body {
+    font-family: '仿宋', 'Arial', serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #858ed1;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 2em;
+    text-align: left;
+    flex: 1;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #7ad2de;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+button:not(:first-child),
+button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4c5caf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-container {
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.image-container img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+.my-text {
+    line-height: 1.5;
+}
+
+.custom-margin {
+    margin-bottom: 10px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-out;
+}
+
+body, html {
+    margin: 0;
+    overflow: auto;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.box.inactive {
+    transform: translateX(100%);
+}
+
+.box.active {
+    transform: translateX(0);
+}
+
+.scrolling-text-container {/* 设置滚动区域的样式 */
+    height: 200px; /* 设置滚动区域的高度 */
+    overflow: hidden;
+}
+
+.scrolling-text {/* 设置文字的样式 */
+    animation: scrollText 10s linear infinite; /* 调整滚动速度和时间 */
+}
+
+@keyframes scrollText {/* 定义滚动动画 */
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
