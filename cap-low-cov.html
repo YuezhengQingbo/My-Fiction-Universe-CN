@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大小写转换器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>大小写转换器</h1>
+    
+    <label for="inputText">请输入文本：</label>
+    <input type="text" id="inputText" placeholder="请输入文本" />
+    
+    <button onclick="convertText()">转换</button>
+
+    <div id="result">
+        <h2>转换结果:</h2>
+        <p><strong>1. 大写转小写:</strong> <span id="lowercaseResult"></span></p>
+        <p><strong>2. 小写转大写:</strong> <span id="uppercaseResult"></span></p>
+        <p><strong>3. 标题大小写:</strong> <span id="titleCaseResult"></span></p>
+    </div>
+
+    <script>
+        function convertText() {
+            // 获取输入的文本
+            var text = document.getElementById("inputText").value;
+
+            // 1. 大写转小写
+            var lowercaseText = text.toLowerCase();
+
+            // 2. 小写转大写
+            var uppercaseText = text.toUpperCase();
+
+            // 3. 标题大小写
+            var titleCaseText = text.replace(/\b\w/g, function(char) {
+                return char.toUpperCase();
+            }).replace(/\b\w/g, function(char) {
+                return char.toLowerCase();
+            });
+
+            // 显示结果
+            document.getElementById("lowercaseResult").textContent = lowercaseText;
+            document.getElementById("uppercaseResult").textContent = uppercaseText;
+            document.getElementById("titleCaseResult").textContent = titleCaseText;
+        }
+    </script>
+</body>
+</html>
